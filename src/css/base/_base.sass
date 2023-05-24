@@ -1,0 +1,141 @@
+::-webkit-scrollbar 
+        width: 26px
+        height: 24px
+::-webkit-scrollbar-thumb 
+    height: 6px
+    border: 10px solid rgba(0, 0, 0, 0)
+    -webkit-background-clip: padding-box
+            background-clip: padding-box
+    -webkit-border-radius: 17px
+    background-color: mainColor(.6)
+    // -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05)
+::-webkit-scrollbar-thumb:hover 
+    height: 6px
+    border: 10px solid rgba(0, 0, 0, 0)
+    -webkit-background-clip: padding-box
+            background-clip: padding-box
+    -webkit-border-radius: 17px
+    background-color: mainColor(1)
+    // -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05)
+::-webkit-scrollbar-button 
+    width: 0
+    height: 0
+    display: none
+::-webkit-scrollbar-corner 
+    background-color: transparent 
+
+.black
+	color: black!important
+.gray
+	color: #BEBEBE!important
+
+body.main-bg
+	&::-webkit-scrollbar-thumb 
+	    
+	    background-color: white
+	    // -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05)
+	&::-webkit-scrollbar-thumb:hover 
+	    
+	    background-color: white
+h1
+	font-size: 25px
+h2
+	font-size: 20px
+
+.fullCenter
+	display: flex
+	justify-content: center
+	align-items: center
+.fullWidth
+	width: 100%!important
+.main-color
+	color: $main-color
+.main-bg
+	background-color: $main-color
+.mtm-0
+	margin-top: 0
+
+.f-15
+	font-size: 15px
+.f-18
+	font-size: 18px
+.f-20
+	font-size: 20px
+.f-25
+	font-size: 25px
+.f-100
+	font-size: 100px
+
+.bold
+	font-weight: bold
+
+.no-padding
+	padding: 0
+.f-3
+	flex: 3
+.f-2
+	flex: 2
+.f-1
+	flex: 1
+
+@include media-breakpoint-between(xs, sm)
+	.pm-0
+		padding: 0!important
+
+	.mtm-1
+		margin-top: 10px
+
+
+.hide-first
+	display: none
+.growable
+	@extend .fullCenter
+	display: flex
+	flex-grow: 1
+
+.copyright-text
+	font-size: 15px
+	color: $black
+	opacity: .24
+.white
+	color: white
+@supports (display: flex)
+	.flexAlert
+		display: none
+
+
+.limit-min
+	min-width: 100px
+.limit-max
+	max-width: 100px
+
+
+.limit-max--400
+	max-width: 400px!important
+	width: 100%!important
+.limit-max--700
+	max-width: 700px!important
+	width: 100%!important
+.limit-max--566
+	max-width: 566px!important
+	width: 100%!important
+
+.ws-wrap
+	white-space: wrap!important
+.ws-nowrap
+	white-space: nowrap!important
+
+
+
+.blink
+  animation: blink-animation 1s steps(5, start) infinite
+ 
+@keyframes blink-animation
+  to
+    visibility: hidden
+.shadow
+	@include shadow(1)
+	transition: all 250ms
+	&:hover,&:focus
+		@include shadow(3);
+		transform: translateY(-5px)

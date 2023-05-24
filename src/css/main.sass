@@ -1,0 +1,62 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// own
+@import "abstracts/bt5start"
+  
+@import "abstracts/function"
+@import "abstracts/mixin"
+@import "abstracts/variables"
+
+
+// all bootstrap components
+$theme-colors: ( primary: $main-color, danger: #ff4136)
+$grid-gutter-width: 30px !default
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// @import "../../node_modules/@fortawesome/fontawesome";
+// @import "../fontawesome/scss/fontawesome.scss"
+// @import "../fontawesome/scss/solid.scss"
+// @import "../fontawesome/scss/brands.scss"
+
+
+// .user
+// 	@extend %fa-icon;
+// 	@extend .fas;
+// 	&:before
+// 		content: fa-content($fa-var-user)
+
+
+
+
+@import "base/base"
+@import "base/preloader"
+@import "base/typography"
+@import "base/utilities"
+@import "base/fonts"
+
+@import "components/component" 
+
+@import "layout/footer"
+@import "layout/header"
+@import "layout/navigation"
+
+
+
+@import "abstracts/bt5end"
+
+// components
+// @import "./components/tracking"
+$progress-color-dark:       $main-color
+$progress-color:            $main-color
+$progress-color-light:      $grey
+$progress-color-grey-light: white
+$progress-color-grey:       $main-color
+$progress-color-grey-dark:  #333333
+@import "../../node_modules/progress-tracker/app/styles/progress-tracker.scss"
+@import "common.sass"
+@import "../../node_modules/@chenfengyuan/datepicker/src/index.scss"
+
+
+
+// @import "test-grid.sass"
